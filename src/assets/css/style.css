@@ -1,0 +1,354 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-block {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.border-rounded {
+    border-radius: 10px;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+.app .btn:hover{
+    background-color: #e2dddd;
+    color: black;
+}
+
+/* --responsive-- */
+@media (max-width: 576px) {
+    .container {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn-block {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup .signup-form {
+        padding: 15px;
+    }
+
+    .signup .signup-form .form-group label {
+        font-size: 14px;
+    }
+
+    .signup .signup-form .btn-block {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .signin .signin-form {
+        padding: 15px;
+    }
+
+    .signin .signin-form .form-group label {
+        font-size: 14px;
+    }
+
+    .signin .signin-form .btn-block {
+        font-size: 14px;
+    }
+}
+
+/* signin-page-start- */
+
+.signin .signin-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.signin .signin-form .form-group {
+    margin-bottom: 15px;
+}
+
+.signin .signin-form .btn-block {
+    width: 100%;
+}
+
+.signin .login {
+    margin-top: 20px;
+}
+
+.signup .login {
+    margin-top: 20px;
+}
+
+/* signin--page-end- */
+
+/* signup--page-start- */
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-form .btn-block {
+    width: 100%;
+}
+
+.signup {
+    margin-bottom: 30px;
+}
+
+/* signup--page-end- */
+
+/* ----drag and drop---start--- */
+.app {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+}
+
+/* Main control section styling */
+.main-control {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    margin-right: 10px;
+}
+
+.main-control .logout .btn-logout {
+    margin-right: 40px;
+}
+.main-control .logout .btn-profile {
+    margin-right: 10px;
+}
+
+/* Controls section styling */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Common button styling */
+.btn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Search input styling */
+.search-input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Sort select styling */
+.sort-select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Column container styling */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual column styling */
+.column {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 10px;
+    width: 30%;
+    min-height: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Column heading styling */
+.column h2 {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+/* Task styling */
+.task {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Task actions styling */
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Task action buttons styling */
+.task-actions button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.swal2-styled {
+    background-color: #0d6efd !important;
+}
+
+.columns .font-description{
+    font-size: 14px;
+}
+.columns .font-createdat{
+    font-size: 12px;
+}
+
+/* ----drag and drop---end--- */
+
+
+/* --------profile------start */
+.profile-container {
+    padding-top: 50px;
+  }
+  
+  .profile-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+  }
+  
+  .profile-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .profile-card .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .profile-card .btn {
+    min-width: 100px;
+  }
+  
+  .profile-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .profile-card .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+
+  /* ------profile end---- */
+  /* ----------spinner-------- */
+  .spinner-border {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    z-index: 999;
+    height: 80px;
+    width: 80px;
+  }
+  
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    z-index: 2;
+  }
