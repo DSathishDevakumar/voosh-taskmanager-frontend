@@ -94,7 +94,7 @@ const ProfilePage = () => {
       // Submit the form data
       axios.post(ImportedURL.API.updateUser + "/" + data._id, formData)
         .then((res) => {
-          Success(res.statusText);
+          Success("Updated successfully");
           history.push('./tasks')
         }).catch(({ response }) => {
           Error(response.statusText);

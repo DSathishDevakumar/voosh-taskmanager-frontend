@@ -1,7 +1,7 @@
-const LIVE = false
-const LIVEURL = LIVE ? "https://voosh-backend-5vxz.onrender.com/" : "http://localhost:4001/";
+const LIVE = true
+const LIVEURL = LIVE ? "https://voosh-taskmanager-backend.onrender.com/" : "http://localhost:4001/";
 const ROOTURL = LIVEURL + 'api/v1/';
-const FILEURL = LIVE ? "https://voosh-backend-5vxz.onrender.com" : "http://localhost:4001";
+const FILEURL = LIVE ? "https://voosh-taskmanager-backend.onrender.com" : "http://localhost:4001";
 const API = {
     login: ROOTURL + 'account/login',
 

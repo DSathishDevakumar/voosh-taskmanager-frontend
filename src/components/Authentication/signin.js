@@ -4,10 +4,13 @@ import ImportedURL from '../../common/api';
 import { Error, Success } from '../../common/swal';
 import axios from 'axios';
 import { GoogleLogin } from '@react-oauth/google';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordVisible, setPasswordVisible] = useState(true);
     const history = useHistory();
 
     const handleSignIn = async (e) => {
@@ -19,7 +22,7 @@ const SignIn = () => {
             }
             axios.post(ImportedURL.API.login, formData)
                 .then((res) => {
-                    if (res.data.status == "1") {
+                    if (res.data.status === "1") {
                         Success('Logged in successfully');
                         localStorage.setItem('vooshtoken', res.data.token);
                         window.location.href = "/";
@@ -27,27 +30,21 @@ const SignIn = () => {
                         Error(res.data.message)
                     }
                 }).catch(({ response }) => {
-                    Error(response.message)
+                    Error('Internal server error')
                 });
         } catch (error) {
             console.error('Error signing in', error);
         }
     };
+
     const handleSignUpClick = () => {
         history.push('/signup');
     };
 
-    // -----gogle login----
-    // const handleGoogleSignInSuccess = (response) => {
-    //     console.log(response);
-    //     // Handle login success, e.g., make an API call to your server
-    //     history.push('/tasks');
-    // };
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
 
-    // const handleGoogleSignInFailure = (error) => {
-    //     console.error(error);
-    //     // Handle login failure
-    // };
     return (
         <div className="container mt-5 signin">
             <h2 className="text-center mb-4">Login</h2>
@@ -64,21 +61,25 @@ const SignIn = () => {
                 </div>
                 <div className="form-group">
                     <label>Password</label>
-                    <input
-                        type="password"
-                        className="form-control"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
+                    <div className="input-group">
+                        <input
+                            type={passwordVisible ? "password" : "text"}
+                            className="form-control"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <span className="input-group-text eye-icon" onClick={togglePasswordVisibility}>
+                            <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+                        </span>
+                    </div>
                 </div>
                 <button type="submit" className="btn btn-primary btn-block">Login</button>
-
-
             </form>
             <div className="text-center">
                 <div className='login'>
-                    <span>Don't have an account ? </span><span style={{ color: "#0d6efd", cursor: "pointer" }} onClick={handleSignUpClick}>Sign Up</span>
+                    <span>Don't have an account? </span>
+                    <span style={{ color: "#0d6efd", cursor: "pointer" }} onClick={handleSignUpClick}>Sign Up</span>
                 </div>
                 <div>
                     {/* <GoogleLogin

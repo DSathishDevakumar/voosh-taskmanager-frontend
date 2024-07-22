@@ -138,6 +138,26 @@ h2 {
     margin-top: 20px;
 }
 
+.input-group {
+    position: relative;
+}
+
+.input-group .form-control {
+    padding-right: 2.5rem; /* Adjust based on icon size */
+    border-radius: 5px !important;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 0.5rem; /* Adjust based on your design */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    z-index: 99;
+}
 /* signin--page-end- */
 
 /* signup--page-start- */

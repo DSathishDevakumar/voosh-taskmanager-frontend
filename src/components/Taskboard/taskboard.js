@@ -31,7 +31,7 @@ const App = () => {
         closeModal();
         setSpinner(false);
       }).catch((response) => {
-        Error(response.statusMessage);
+        Error("Internal server error");
         setSpinner(false);
       });
   };
@@ -76,10 +76,10 @@ const App = () => {
       // Send updated tasks to backend
       axios.post(ImportedURL.API.updateTasksOrder, { tasks: updatedTasks })
         .then(response => {
-          Success(response.statusText);
+          Success("Updated successfully");
         })
         .catch(({ response }) => {
-          Error(response.statusText);
+          Error("Internal server error");
         });
     }
   };
@@ -167,7 +167,7 @@ const App = () => {
     if (modalContent.type === 'add') {
       axios.post(ImportedURL.API.addTask, modalContent.task)
         .then((res) => {
-          Success(res.statusText);
+          Success("Task added successfully");
           fetchTasks();
           closeModal();
         }).catch(({ response }) => {
@@ -176,7 +176,7 @@ const App = () => {
     } else if (modalContent.type === 'edit') {
       axios.post(ImportedURL.API.editTask + "/" + modalContent.task._id, modalContent.task)
         .then((res) => {
-          Success(res.statusText);
+          Success("Task updated successfully");
           fetchTasks();
           closeModal();
         }).catch(({ response }) => {
@@ -190,7 +190,7 @@ const App = () => {
       if (result.isConfirmed) {
         axios.get(ImportedURL.API.softDeleteTask + "/" + task._id)
           .then((res) => {
-            Success(res.statusText);
+            Success("Deleted successfully");
             fetchTasks();
           }).catch(({ response }) => {
             Error(response.statusText);
