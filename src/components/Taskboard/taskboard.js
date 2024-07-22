@@ -209,7 +209,7 @@ const App = () => {
 
         <div className='main-control'>
           <div className="controls">
-            <button className="btn" onClick={() => openModal("", 'add')}>Add Task</button>
+            <button className="btn add_btn" onClick={() => openModal("", 'add')}>Add Task</button>
             <input
               type="text"
               placeholder="Search tasks..."

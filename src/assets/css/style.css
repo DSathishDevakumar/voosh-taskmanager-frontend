@@ -53,7 +53,8 @@ h2 {
 .p-4 {
     padding: 1.5rem;
 }
-.app .btn:hover{
+
+.app .btn:hover {
     background-color: #e2dddd;
     color: black;
 }
@@ -111,6 +112,58 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+    .main-control {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controls {
+        margin-bottom: 10px;
+    }
+
+    .search-input,
+    .sort-select {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .logout {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .add_btn {
+        margin-bottom: 0px;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 5px;
+    }
+
+    .task {
+        padding: 5px;
+    }
+}
+
 /* signin-page-start- */
 
 .signin .signin-form {
@@ -143,13 +196,15 @@ h2 {
 }
 
 .input-group .form-control {
-    padding-right: 2.5rem; /* Adjust based on icon size */
+    padding-right: 2.5rem;
+    /* Adjust based on icon size */
     border-radius: 5px !important;
 }
 
 .eye-icon {
     position: absolute;
-    right: 0.5rem; /* Adjust based on your design */
+    right: 0.5rem;
+    /* Adjust based on your design */
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -158,6 +213,7 @@ h2 {
     padding: 0;
     z-index: 99;
 }
+
 /* signin--page-end- */
 
 /* signup--page-start- */
@@ -202,13 +258,9 @@ header {
 .main-control {
     display: flex;
     justify-content: space-between;
-    margin: 40px;
-    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
-.main-control .logout .btn-logout {
-    margin-right: 40px;
-}
 .main-control .logout .btn-profile {
     margin-right: 10px;
 }
@@ -259,7 +311,7 @@ header {
     background-color: #f1f1f1;
     border-radius: 8px;
     padding: 10px;
-    width: 30%;
+    width: 100%;
     min-height: 500px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -308,10 +360,11 @@ header {
     background-color: #0d6efd !important;
 }
 
-.columns .font-description{
+.columns .font-description {
     font-size: 14px;
 }
-.columns .font-createdat{
+
+.columns .font-createdat {
     font-size: 12px;
 }
 
@@ -321,49 +374,49 @@ header {
 /* --------profile------start */
 .profile-container {
     padding-top: 50px;
-  }
-  
-  .profile-card {
+}
+
+.profile-card {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
-  }
-  
-  .profile-card h2 {
+}
+
+.profile-card h2 {
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  .profile-card .form-group {
+}
+
+.profile-card .form-group {
     margin-bottom: 15px;
-  }
-  
-  .profile-card .btn {
+}
+
+.profile-card .btn {
     min-width: 100px;
-  }
-  
-  .profile-card .btn-primary {
+}
+
+.profile-card .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
-  }
-  
-  .profile-card .btn-secondary {
+}
+
+.profile-card .btn-secondary {
     background-color: #6c757d;
     border-color: #6c757d;
-  }
+}
 
-  /* ------profile end---- */
-  /* ----------spinner-------- */
-  .spinner-border {
+/* ------profile end---- */
+/* ----------spinner-------- */
+.spinner-border {
     position: absolute;
     top: 50%;
     left: 47%;
     z-index: 999;
     height: 80px;
     width: 80px;
-  }
-  
+}
+
 #overlay {
     position: fixed;
     width: 100%;
@@ -371,4 +424,7 @@ header {
     bottom: 0;
     background-color: rgb(255, 255, 255, 0.5);
     z-index: 2;
-  }
+}
+.search-input, .sort-select{
+    margin-top: 0px !important;
+}

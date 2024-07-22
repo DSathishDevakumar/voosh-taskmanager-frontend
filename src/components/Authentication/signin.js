@@ -22,11 +22,12 @@ const SignIn = () => {
             }
             axios.post(ImportedURL.API.login, formData)
                 .then((res) => {
-                    if (res.data.status === "1") {
+                    if (res.data.status == 1) {
                         Success('Logged in successfully');
                         localStorage.setItem('vooshtoken', res.data.token);
                         window.location.href = "/";
                     } else {
+                        console.log('----',res);
                         Error(res.data.message)
                     }
                 }).catch(({ response }) => {
